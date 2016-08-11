@@ -67,6 +67,8 @@
                                       UIImageOrientation orientation,
                                       NSDictionary *info)
                       {
+                          
+                          
                           NSString *filename = @"";
                           NSString *path = @"";
                           
@@ -79,7 +81,7 @@
                           {
                               path = [[info objectForKey:@"PHImageFileURLKey"] absoluteString];
                           }
-                          
+                          filename = obj.localIdentifier;
                           [assets addObject:@{
                                               @"id" : obj.localIdentifier,
                                               @"title" : filename,
